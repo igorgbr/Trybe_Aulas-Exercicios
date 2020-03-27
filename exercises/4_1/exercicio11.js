@@ -1,3 +1,5 @@
+//calculadora de IR 
+
 let salarioBruto = 5000;
 let salarioBase;
 
