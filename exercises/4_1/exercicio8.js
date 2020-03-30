@@ -1,8 +1,8 @@
 //Verifica se algum valor entre as 3 variaveis é par
 
-let num1 = 5;
-let num2 = 20;
-let num3 = 12;
+let num1 = 1;
+let num2 = 2;
+let num3 = 6;
 
 let soma = (num1 + num2 + num3);
 
