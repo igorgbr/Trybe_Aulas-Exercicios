@@ -21,7 +21,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/4_3/exercicioFunc5.js"
+            "program": "${workspaceFolder}/xadres.js"
         }
     ]
 }
