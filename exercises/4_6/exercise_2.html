@@ -1,0 +1,171 @@
+<!-- Add a script tag, and add the functions from the calculator exercise (view the solution if you haven't done it yet).
+For each operation, create an event listener for the button, and when it's clicked, find the value of the appropriate input and show the result of the calculation in the solution div.
+Bonus: respond to key presses so that the user doesn't have to click the button.-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+<script>
+
+    //Button Event
+    // const botaoQuadrado = document.querySelector('#square-button');
+    // const botaoMetade = document.querySelector('#half-button');
+    // const botaoPorcento = document.querySelector('#percent-button');
+    // const botaoRaio = document.querySelector('#area-button');
+    
+    //Inputs -*BONUS*-
+    const valorQuadrado = document.querySelector('#square-input');
+    const valorPorcento1 = document.querySelector('#percent1-input')
+    const valorPorcento2 = document.querySelector('#percent2-input')
+    const valorMetade = document.querySelector('#half-input')
+    const valorArea = document.querySelector('#area-input')
+
+    //DIV do output
+    const divResult = document.querySelector('#solution');
+
+
+    //eventos
+
+    //Button
+    // botaoQuadrado.addEventListener('click', function(){
+    //     let valorQuadrado = document.querySelector('#square-input');
+    //     let valor = valorQuadrado.value;
+
+    //     let res = valor * valor;
+    //     divResult.innerHTML = "O quadrado de " + valor + " é " + res + ".";
+    // })
+
+    //change and keyup
+    function calculaQuadrado(){
+        let valorQuadrado = document.querySelector('#square-input');
+        let valor = valorQuadrado.value;
+
+        let res = valor * valor;
+        divResult.innerHTML = "O quadrado de " + valor + " é " + res + ".";
+    }
+
+    valorQuadrado.addEventListener('change', calculaQuadrado);
+    valorQuadrado.addEventListener('keyup', calculaQuadrado);
+
+    
+    //Button
+    // botaoMetade.addEventListener('click', function(){
+    //     let valorMetade = document.querySelector('#half-input')
+    //     let valor = valorMetade.value;
+        
+    //     let res = valor / 2;
+    //     divResult.innerHTML = "A metade de " + valor + " é " + res + ".";
+    // })
+
+    function calculaMetade(){
+        let valorMetade = document.querySelector('#half-input')
+        let valor = valorMetade.value;
+        
+        let res = valor / 2;
+        divResult.innerHTML = "A metade de " + valor + " é " + res + ".";
+
+    }
+
+    valorMetade.addEventListener('change', calculaMetade)
+    valorMetade.addEventListener('keyup', calculaMetade)
+
+
+    //Button
+    // botaoPorcento.addEventListener('click', function(){
+    //     let valorPorcento1 = document.querySelector('#percent1-input')
+    //     let valorPorcento2 = document.querySelector('#percent2-input')
+        
+    //     let valor1 = valorPorcento1.value;
+    //     let valor2 = valorPorcento2.value;
+
+    //     let res = (valor1 / valor2) * 100 
+        
+    //     divResult.innerHTML = (valor1 + ' é ' + valor2 + '% de ' + res + ".")
+    // })
+
+    function calculaPorcentagem(){
+        let valorPorcento1 = document.querySelector('#percent1-input')
+        let valorPorcento2 = document.querySelector('#percent2-input')
+        
+        let valor1 = valorPorcento1.value;
+        let valor2 = valorPorcento2.value;
+
+        let res = (valor1 / valor2) * 100;
+        
+        divResult.innerHTML = (valor1 + ' é ' + valor2 + '% de ' + res + ".")
+    }
+
+    valorPorcento1.addEventListener('change', calculaPorcentagem);
+    valorPorcento1.addEventListener('keyup', calculaPorcentagem);
+
+    valorPorcento2.addEventListener('change', calculaPorcentagem);
+    valorPorcento2.addEventListener('keyup', calculaPorcentagem);
+
+    // botaoRaio.addEventListener('click', function(){
+    //     let valorArea = document.querySelector('#area-input')
+        
+    //     let valor = valorArea.value;
+
+    //     let res = (Math.PI * (valor * valor))
+        
+    //     divResult.innerHTML = "A área de um circulo com raio " + valor + " é " + res + ".";
+    // })
+
+    //change and keyup
+    function calculaRaio(){
+        let valorArea = document.querySelector('#area-input')
+        
+        let valor = valorArea.value;
+        let res = (Math.PI * (valor * valor))
+        
+        divResult.innerHTML = "A área de um circulo com raio " + valor + " é " + res + ".";
+
+    }
+    valorArea.addEventListener('keyup', calculaRaio)
+    valorArea.addEventListener('change', calculaRaio)
+
+    //esconde botoes
+    let botoes = document.querySelectorAll('button');
+
+    for (i = 0; i < botoes.length; i++){
+        botoes[i].style.display = "none";
+    }
+
+    
+</script>
+</body>
+</html>
