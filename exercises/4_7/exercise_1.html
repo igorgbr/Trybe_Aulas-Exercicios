@@ -25,10 +25,12 @@
             
            let buttonsFundo = document.querySelectorAll(".cor-fundo");
            let buttonsTexto = document.querySelectorAll(".cor-texto");
+           let buttonsFamily = document.querySelectorAll(".family-font");
            let rangeValor = document.querySelector("#tamanho-texto");
            let espacoLinha = document.querySelector("#espaco-linha");
            let container = document.querySelector("#container");
 
+            console.log(buttonsFamily)
            espacoLinha.addEventListener("change", function(){
                let espacamento = espacoLinha.value;
                container.style.lineHeight = espacamento + "%";
@@ -58,16 +60,28 @@
                 document.body.style.color = colorTexto;         
             });
         };
+
+        //Font-Family Event Listener
+        for(i = 0; i < buttonsFamily.length; i++){
+            buttonsFamily[i].addEventListener("click", function(event){         
+                let familiaFonte = event.target.innerHTML;
+                localStorage.setItem("familiaFonte", familiaFonte);
+                document.body.style.fontFamily = familiaFonte;         
+            });
+        };
+
            //Cor do fundo - WEB STORAGE
            let colorFundo = localStorage.colorFundo;
            let colorTexto = localStorage.colorTexto;
            let tamanhoTexto = localStorage.tamanhoTexto;
            let espacamento = localStorage.espacamento;
+           let familiaFonte = localStorage.familiaFonte;
 
            if (colorFundo) document.body.style.backgroundColor = colorFundo;
            if (colorTexto) document.body.style.color = colorTexto;
            if (tamanhoTexto) container.style.fontSize = tamanhoTexto + "px";
            if (espacamento)  container.style.lineHeight = espacamento + "%";
+           if (familiaFonte) document.body.style.fontFamily = familiaFonte;
        }
     </script>
   <body>
@@ -114,13 +128,21 @@
                 <button class="cor-texto" style="background-color: white;">White</button>
                 <button class="cor-texto" style="background-color: cyan;">Cyan</button>
                 <button class="cor-texto" style="background-color: black; color: wheat">Black</button>
-              </div>
+              </div><br>
             <div id="font-size">
                 <label>Tamanho do Texto</label>
                 <input type="range" id="tamanho-texto" min="2" max="50" step="4"><br>
                 <label>Espaçamento das linhas</label>
                 <input type="range" id="espaco-linha" min="80" max="200" step="10">
+            </div><br>
+            <div id="font-family">
+              <button class="family-font">Serif</button>
+              <button class="family-font">Sans-serif</button>
+              <button class="family-font">Monospace</button>
+              <button class="family-font">Cursive</button>
+              <button class="family-font">Fantasy</button>
             </div>
+
         </div>
       </div>
     </fieldset>
