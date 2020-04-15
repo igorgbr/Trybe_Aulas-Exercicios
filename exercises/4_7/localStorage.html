@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 4.7</title>
+  </head>
+  <style>
+    #container {
+      border: 1px solid black;
+      width: 600px;
+      text-align: justify;
+    }
+    h1 {
+        text-align: center;
+    }
+    button {
+        border-radius: 20%;
+    }
+  </style>
+   <script>
+
+
+       window.onload = function(){
+            
+           let buttonsFundo = document.querySelectorAll(".cor-fundo");
+           let buttonsTexto = document.querySelectorAll(".cor-texto");
+           let rangeValor = document.querySelector("#tamanho-texto");
+           let espacoLinha = document.querySelector("#espaco-linha");
+           let container = document.querySelector("#container");
+
+           espacoLinha.addEventListener("change", function(){
+               let espacamento = espacoLinha.value;
+               container.style.lineHeight = espacamento + "%";
+               localStorage.setItem("espacamento", espacamento);
+           })
+
+           rangeValor.addEventListener("change", function(){
+               let tamanhoTexto = rangeValor.value;
+               container.style.fontSize = tamanhoTexto + "px";
+               localStorage.setItem("tamanhoTexto", tamanhoTexto);
+           })
+
+           //cor do fundo Event Listener
+           for(i = 0; i < buttonsFundo.length; i++){
+            buttonsFundo[i].addEventListener("click", function(event){         
+                let colorFundo = event.target.innerHTML;
+                localStorage.setItem("colorFundo", colorFundo);
+                document.body.style.backgroundColor = colorFundo;         
+            });
+        };
+
+        //cor do texto Event Listener
+        for(i = 0; i < buttonsTexto.length; i++){
+            buttonsTexto[i].addEventListener("click", function(event){         
+                let colorTexto = event.target.innerHTML;
+                localStorage.setItem("colorTexto", colorTexto);
+                document.body.style.color = colorTexto;         
+            });
+        };
+           //Cor do fundo - WEB STORAGE
+           let colorFundo = localStorage.colorFundo;
+           let colorTexto = localStorage.colorTexto;
+           let tamanhoTexto = localStorage.tamanhoTexto;
+           let espacamento = localStorage.espacamento;
+
+           if (colorFundo) document.body.style.backgroundColor = colorFundo;
+           if (colorTexto) document.body.style.color = colorTexto;
+           if (tamanhoTexto) container.style.fontSize = tamanhoTexto + "px";
+           if (espacamento)  container.style.lineHeight = espacamento + "%";
+       }
+    </script>
+  <body>
+    <center>
+      <div id="container">
+        <h1>Lorem Ipsum</h1>
+        <h3>
+          <i>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit..."</i>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit
+          tellus, mattis tempus justo eget, feugiat bibendum turpis. Integer
+          posuere, ligula id imperdiet semper, quam urna finibus lectus, at
+          aliquet purus justo eget diam. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos. Curabitur viverra
+          pellentesque ex, ac consequat enim gravida sed. Nunc at turpis velit.
+          Ut erat erat, mollis non scelerisque et, porta non ipsum. Curabitur id
+          ultricies enim, a blandit ante. Praesent eget neque sapien. Aenean
+          ornare eget elit id ornare. Duis sed mauris eu velit lobortis
+          efficitur at non ligula. Aliquam facilisis, diam eget hendrerit
+          auctor, nisl risus porttitor quam, vel bibendum arcu orci mollis
+
+
+        </p>
+      </div>
+      <fieldset>
+          <legend>Configuração</legend>
+      <div class="inputs">
+        <div id="fundo-cor">
+          <label>Fundo: </label>
+          <button class="cor-fundo" style="background-color: gray;">Gray</button>
+          <button class="cor-fundo" style="background-color: lightblue;">LightBlue</button>
+          <button class="cor-fundo" style="background-color: white;">White</button>
+          <button class="cor-fundo" style="background-color: cyan;">Cyan</button>
+          <button class="cor-fundo" style="background-color: black; color: wheat">Black</button>
+        </div><br>
+            <div id="texto-cor">
+                <label>Texto: </label>
+                <button class="cor-texto" style="background-color: gray;">Gray</button>
+                <button class="cor-texto" style="background-color: lightblue;">LightBlue</button>
+                <button class="cor-texto" style="background-color: white;">White</button>
+                <button class="cor-texto" style="background-color: cyan;">Cyan</button>
+                <button class="cor-texto" style="background-color: black; color: wheat">Black</button>
+              </div>
+            <div id="font-size">
+                <label>Tamanho do Texto</label>
+                <input type="range" id="tamanho-texto" min="2" max="50" step="4"><br>
+                <label>Espaçamento das linhas</label>
+                <input type="range" id="espaco-linha" min="80" max="200" step="10">
+            </div>
+        </div>
+      </div>
+    </fieldset>
+    </center>
+  </body>
+</html>
