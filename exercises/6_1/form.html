@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body><form>
+    <fieldset>
+        <label for="">Nome: </label>
+        <input name="nome" required="required" placeholder="Digite seu nome" type="text">
+        <br>
+        <label for="">E-mail: </label>
+        <input name="email" required="required" placeholder="Digite seu email aqui" type="email">
+        <br>
+        <label for="">CPF </label>
+        <input name="cpf" required="required" maxlength="11" placeholder="Digite seu cpf aqui" type="text">
+        <br>
+        <label for="">Endereço </label>
+        <input name="endereco" required="required" maxlength="200" placeholder="Digite seu endereço aqui" type="text">
+        <br>
+        <label for="">Cidade </label>
+        <input name="cidade" required="required" maxlength="28" placeholder="Digite seu cidade aqui" type="text">
+        <br>
+        <label for="estados">Estado </label>
+        <select id="estados">
+        </select>
+        <br>
+        <input type="radio" id="Casa" name="tipo" value="Casa">
+        <label for="Casa">Casa</label><br>
+        <input type="radio" id="Aparamento" name="tipo" value="Aparamento">
+        <label for="Aparamento">Aparamento</label><br>
+    </fieldset>
+
+    <fieldset>
+        <label>Resumo do curriculo:</label><br>
+        <textarea maxlength="1000" placeholder="digite seu curriculo"></textarea>
+        <br>
+        <label>Cargo:</label><br>
+        <input name="cargo" required="required" maxlength="40" placeholder="Digite seu cargo aqui" type="text">
+        <br>
+        <br>
+        <label>Descrição do cargo:</label><br>
+        <input name="descricao" required="required" maxlength="500" placeholder="" type="text">
+        <br>
+        <label>Data de inicio:</label><br>
+        <input name="data" required="required" maxlength="500" placeholder="" type="text">
+        <br>
+        <button type="button" onclick="">Enviar</button>
+        <button>Limpar</button>
+    </fieldset>
+</form>
+<script src="script.js"></script>
+
+</body>
+</html>
