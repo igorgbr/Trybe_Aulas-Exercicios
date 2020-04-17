@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="Style.css">
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/DatePickerX.min.css">
+    <script src="js/DatePickerX.min.js"></script>
+    <script src="./path/to/just-validate.min.js"></script>
     
 </head>
 <body>
-    
+
     <form action="">
         <center><h2 class="display-4 text-muted">Formulário Trybe</h2></center>
     <fieldset>
     <div class="form-group"></div>
         <label for="">Nome: </label>
-        <input  class="form-control" name="nome" required="required" placeholder="Digite seu nome" type="text">
+        <input  class="form-control" data-validate-field="name" name="nome" required="required" placeholder="Digite seu nome" type="text">
         <br>
         <label for="">E-mail: </label>
-        <input  class="form-control" name="email" required="required" placeholder="Digite seu email aqui" type="email">
+        <input  class="form-control" data-validate-field="email" name="email" required="required" placeholder="Digite seu email aqui" type="email">
         <br>
         <label for="">CPF </label>
         <input  class="form-control" name="cpf" required="required" maxlength="11" placeholder="Digite seu cpf aqui" type="text">
