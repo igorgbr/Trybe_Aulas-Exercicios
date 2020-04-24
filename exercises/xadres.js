@@ -12,7 +12,7 @@ if (posicaoRainhaLinha === posicaoPecaLinha || posicaoRainhaColuna === posicaoPe
 }
 
 //Diagonal superior direita
-for(let i = 1; i < 8; i +=1) {
+for (let i = 1; i < 8; i += 1) {
     let linhaRainha = posicaoRainhaLinha + i;
     let colunaRainha = posicaoRainhaLinha + i;
 
@@ -20,51 +20,51 @@ for(let i = 1; i < 8; i +=1) {
         break;
     }
 
-    if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha){
+    if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha) {
         ataqueFeito = true;
     }
 }
 
-    //Diagona inferior esquerda
-    for(let i = 1; i < 8; i +=1) {
-        let linhaRainha = posicaoRainhaLinha - i;
-        let colunaRainha = posicaoRainhaLinha - i;
-    
-        if (linhaRainha < 1 || colunaRainha < 1) {
-            break;
-        }
-    
-        if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha){
-            ataqueFeito = true;
-        }
+//Diagona inferior esquerda
+for (let i = 1; i < 8; i += 1) {
+    let linhaRainha = posicaoRainhaLinha - i;
+    let colunaRainha = posicaoRainhaLinha - i;
+
+    if (linhaRainha < 1 || colunaRainha < 1) {
+        break;
     }
 
-        //Diagona superior esquerda
-        for(let i = 1; i < 8; i +=1) {
-            let linhaRainha = posicaoRainhaLinha + i;
-            let colunaRainha = posicaoRainhaLinha - i;
-        
-            if (linhaRainha > 8 || colunaRainha < 1) {
-                break;
-            }
-        
-            if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha){
-                ataqueFeito = true;
-            }
-        }
+    if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha) {
+        ataqueFeito = true;
+    }
+}
+
+//Diagona superior esquerda
+for (let i = 1; i < 8; i += 1) {
+    let linhaRainha = posicaoRainhaLinha + i;
+    let colunaRainha = posicaoRainhaLinha - i;
+
+    if (linhaRainha > 8 || colunaRainha < 1) {
+        break;
+    }
+
+    if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha) {
+        ataqueFeito = true;
+    }
+}
 
 
-        //Diagona inferior direita
-        for(let i = 1; i < 8; i +=1) {
-            let linhaRainha = posicaoRainhaLinha - i;
-            let colunaRainha = posicaoRainhaLinha + i;
-        
-            if (linhaRainha < 1 || colunaRainha > 8) {
-                break;
-            }
-        
-            if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha){
-                ataqueFeito = true;
-            }
-        }
+//Diagona inferior direita
+for (let i = 1; i < 8; i += 1) {
+    let linhaRainha = posicaoRainhaLinha - i;
+    let colunaRainha = posicaoRainhaLinha + i;
+
+    if (linhaRainha < 1 || colunaRainha > 8) {
+        break;
+    }
+
+    if (posicaoPecaLinha === linhaRainha && posicaoPecaColuna === colunaRainha) {
+        ataqueFeito = true;
+    }
+}
 console.log(ataqueFeito);
