@@ -1,0 +1,31 @@
+body {
+}
+h1 {
+
+}
+h2 {
+
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 10px;
+}
+
+
+@media screen and (min-width: 850px) {
+    body {
+        background-color: coral;
+        font-size: 20px;
+    }
+
+    #imagens {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+}
