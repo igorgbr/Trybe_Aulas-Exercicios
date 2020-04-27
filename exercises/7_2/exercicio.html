@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    p {
+    animation-duration: 3s;
+    animation-name: fadein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    }
+
+    #sobrenome {
+        animation-duration: 5s;
+        animation-name: moveleft;
+    }
+
+    @keyframes moveleft{
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            font-size: 30px;
+            opacity: 0%;
+            color: aquamarine;
+        }
+
+        60% {
+            font-size: 50px;
+        }
+
+        to {
+            font-size: 30px;
+            opacity: 100%;
+            color: burlywood;
+        }
+    }
+</style>
+<body>
+    <p></p>
+    <p id="sobrenome"><img src="https://media.giphy.com/media/QWvra259h4LCvdJnxP/giphy.gif"></p>
+</body>
+</html>
