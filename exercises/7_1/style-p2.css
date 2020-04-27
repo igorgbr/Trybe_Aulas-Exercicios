@@ -1,0 +1,23 @@
+h1:nth-child(1){
+    color: red;
+}
+.caixaMae{
+    width: 200px;
+}
+
+.caixa {
+    width: 50%;
+    border: 1px solid #000;
+}
+
+@media only screen and (max-width: 800px){
+    body {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (max-width: 400px)and (orientation: landscape){
+    body {
+        background-color: blue;
+    }
+}
