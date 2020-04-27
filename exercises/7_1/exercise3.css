@@ -89,3 +89,9 @@
         float: none;
     }
    }
+
+   @media only screen and (max-width: 300px){
+    #aside{
+           display:none;
+       }
+   }
