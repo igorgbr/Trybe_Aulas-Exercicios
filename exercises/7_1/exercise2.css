@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: blue;
+    font-size: 20px;
+}
+
+  nav ul li{
+    display: inline;
+  }
+
+  nav ul {
+    background-color: coral;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+        background-color: coral;
+        font-size: 20px;
+    }
+    .aside-one {
+        background-color: crimson;
+        font-size: 30px;
+        max-width: 100%;
+        line-height: 2em;
+    }
+    .aside-two {
+        background-color: crimson;
+        font-size: 30px;
+        max-width: 100%;
+        line-height: 2em;
+    }
+
+    nav ul li{
+        display: none;
+      }
+
+    header p {
+        text-align: center;
+        font-size: 40px;
+        margin: auto;
+    }
+    .main-content {
+        margin: auto 10px;
+    }
+}
