@@ -19,7 +19,7 @@ html {
     box-sizing: inherit;
   }
 
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     body {
         background-color: coral;
         font-size: 20px;
@@ -46,7 +46,51 @@ html {
         font-size: 40px;
         margin: auto;
     }
+
     .main-content {
         margin: auto 10px;
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1500px){
+    body {
+        background-color: green;
+        font-size: 50px;
+    }
+
+    .aside-one {
+        background-color: crimson;
+        font-size: 50px;
+        max-width: 100%;
+        line-height: 2em;
+        padding: 20px;
+    }
+    .aside-two {
+        background-color: crimson;
+        font-size: 30px;
+        max-width: 100%;
+        line-height: 1em;
+    }
+
+    nav ul li{
+        display: none;
+      }
+
+    header p {
+        text-align: center;
+        font-size: 80px;
+        margin: auto;
+        background-color: coral;
+    }
+
+    .main-content h1 {
+        margin: auto 10px;
+        font-size: 42px;
+    }
+
+    .main-content {
+        margin: auto 10px;
+        font-size: 45px;
     }
 }
