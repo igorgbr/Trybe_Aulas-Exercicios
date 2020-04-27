@@ -26,6 +26,17 @@ figure {
         display: flex;
         flex-wrap: wrap;
     }
+}
 
+@media screen and (min-width: 1300px) {
+    body {
+        background-color: rgb(28, 228, 218);
+        font-size: 37px;
+        max-width: 100%;
+    }
 
+    #imagens {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
