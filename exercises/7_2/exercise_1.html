@@ -85,6 +85,11 @@
   animation: exercise-8 4s;
 }
 
+#exercise-9 {
+  animation: exercise-9 4s;
+  animation-direction:alternate;
+  animation-iteration-count:infinite;
+}
 
 @keyframes exercise-1 {
 	from {
@@ -123,6 +128,24 @@
   	to {
       background-color: yellow;
   }
+}
+
+@keyframes exercise-9 {
+  0% {
+      background-color: red;
+  }
+  25% {
+      background-color: yellow;
+  }
+
+  75% {
+      background-color: blue;
+  }
+
+  100% {
+      background-color: green;
+  }
+}
 
 
   </style>
