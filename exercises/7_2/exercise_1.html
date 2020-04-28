@@ -137,6 +137,20 @@ animation-iteration-count:infinite;
 animation-timing-function:ease-in-out;
 }
 
+#exercise-12{
+  opacity: 1;
+}
+#exercise-12:active{
+  animation: exercise-12 1s forwards;
+}
+
+
+@keyframes exercise-12 {
+  0%  { opacity: 1;}
+  100% { opacity: 0;}
+
+}
+
 @keyframes exercise-11 {
 	from {
     margin-left: 0%;
@@ -291,9 +305,22 @@ animation-timing-function:ease-in-out;
       </li>
       <li>
         <section class="justify-content__center">
-          <div id="exercise-12" class="black medium"></div>
+          <div onmouseout="some(this)"id="exercise-12" class="black medium"></div>
         </section>
+        
       </li>
   </ol>
+adada
+  <script>
+function some(x) {
+  
+    x.style.opacity = "0";
+  
+
+  
+
+
+}
+  </script>
 </body>
 </html>
