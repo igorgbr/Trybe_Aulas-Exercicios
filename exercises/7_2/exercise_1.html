@@ -68,13 +68,29 @@
   animation-name: exercise-1;
 }
 
+
+#exercise-6-square:hover + #exercise-6 {
+  animation: exercise-6 5s;
+
+}
+
+
 @keyframes exercise-1 {
 	from {
-    margin-left: 0px;
+    margin-left: 0%;
     
   }
   	to {
     margin-left: 96%;
+  }
+}
+
+  @keyframes exercise-6 {
+	from {
+    margin-left: 96%;
+  }
+  	to {
+    margin-left: 0%;
   }
 }
 
