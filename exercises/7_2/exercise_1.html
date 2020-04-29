@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercícios 7.3</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 90%;
+      height: 100px;
+      border: 1px solid red;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .flex-direction__column { flex-direction: column; }
+    .justify-content__space-between { justify-content: space-between; }
+    .justify-content__center { justify-content: center; }
+    .align-items__flex-start { align-items: flex-start; }
+    .automatic-box-height { height: auto; }
+    .ball { border-radius: 100%; }
+    .green { background-color: green;}
+    .blue { background-color: blue; }
+    .red { background-color: red; }
+    .yellow { background-color: yellow; }
+    .black { background-color: black; }
+    .medium {
+      width: 50px;
+      height: 50px;
+    }
+
+    #exercise-1 {
+  animation-duration: 3s;
+  animation-name: exercise-1;
+  animation-delay: 1s;
+}
+
+#exercise-2 {
+  animation-duration: 2s;
+  animation-name: exercise-1;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#exercise-3 {
+  animation-duration: 1s;
+  animation-name: exercise-1;
+  animation-delay: 1s;
+  animation-direction:alternate;
+  animation-iteration-count:2;
+}
+
+#exercise-4:hover {
+  animation-duration: 5s;
+  animation-name: exercise-1;
+}
+
+#section-5:hover > #exercise-5{
+  animation-duration: 5s;
+  animation-name: exercise-1;
+}
+
+
+#exercise-6-square:hover + #exercise-6 {
+  animation: exercise-6 5s;
+
+}
+
+#exercise-7 {
+  animation: exercise-7 10s;
+  animation-direction:alternate;
+  animation-iteration-count:infinite;
+
+}
+
+#exercise-8 {
+  animation: exercise-8 4s;
+}
+
+#exercise-9 {
+  animation: exercise-9 4s;
+  animation-direction:alternate;
+  animation-iteration-count:infinite;
+}
+
+#exercise-10{
+  animation: exercise-10 4s;
+  animation-direction:alternate;
+  animation-iteration-count:infinite;
+
+}
+
+#exercise-11_1 {
+animation: exercise-11 3s;
+animation-delay: 2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+animation-timing-function: linear;
+}
+
+#exercise-11_2 {
+animation: exercise-11 3s;
+animation-delay: 2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+animation-timing-function: ease;
+}
+#exercise-11_3 {
+animation: exercise-11 3s;
+animation-delay: 2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+animation-timing-function: ease-in;
+}
+
+#exercise-11_4 {
+animation: exercise-11 3s;
+animation-delay: 2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+animation-timing-function: ease-out;
+}
+
+#exercise-11_5{
+animation: exercise-11 3s;
+animation-delay: 2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+animation-timing-function:ease-in-out;
+}
+
+#exercise-12{
+  opacity: 1;
+}
+#exercise-12:active{
+  animation: exercise-12 1s forwards;
+}
+
+
+@keyframes exercise-12 {
+  0%  { opacity: 1;}
+  100% { opacity: 0;}
+
+}
+
+@keyframes exercise-11 {
+	from {
+    margin-left: 0%;
+    
+  }
+  	to {
+    margin-left: 96%;
+  }
+}
+
+@keyframes exercise-1 {
+	from {
+    margin-left: 0%;
+    
+  }
+  	to {
+    margin-left: 96%;
+  }
+}
+
+  @keyframes exercise-6 {
+	from {
+    margin-left: 96%;
+  }
+  	to {
+    margin-left: 0%;
+  }
+}
+
+  @keyframes exercise-7 {
+    from {
+      width: 0%;
+      height: 0%;
+  }
+  	to {
+      width: 100%;
+      height: 100%;
+  }
+  }
+
+  @keyframes exercise-8 {
+    from {
+      background-color: red;
+  }
+  	to {
+      background-color: yellow;
+  }
+}
+
+@keyframes exercise-9 {
+  0% {
+      background-color: red;
+  }
+  25% {
+      background-color: yellow;
+  }
+
+  75% {
+      background-color: blue;
+  }
+
+  100% {
+      background-color: green;
+  }
+}
+
+@keyframes exercise-10 {
+  0% {
+      background-color: red;
+      width: 0%;
+      height: 0%;
+  }
+  25% {
+      background-color: yellow;
+  }
+
+  75% {
+      background-color: blue;
+  }
+
+  100% {
+      background-color: green;
+      width: 100%;
+      height: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <ol>
+    <li>
+      <section>
+        <div id="exercise-1" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section>
+        <div id="exercise-2" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section>
+        <div id="exercise-3" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section>
+        <div id="exercise-4" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section id="section-5">
+        <div id="exercise-5" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__space-between">
+        <div id="exercise-6-square" class="blue medium"></div>
+        <div id="exercise-6" class="ball green medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-7" class="blue medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-8" class="red medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-9" class="red medium"></div>
+      </section>
+    </li>
+    <li>
+      <section class="justify-content__center">
+        <div id="exercise-10" class="red medium"></div>
+      </section>
+    </li>
+      <li>
+        <section class="flex-direction__column align-items__flex-start automatic-box-height">
+          <div id="exercise-11_1" class="red medium"></div>
+          <div id="exercise-11_2" class="blue medium"></div>
+          <div id="exercise-11_3" class="green medium"></div>
+          <div id="exercise-11_4" class="yellow medium"></div>
+          <div id="exercise-11_5" class="black medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div onmouseout="some(this)"id="exercise-12" class="black medium"></div>
+        </section>
+        
+      </li>
+  </ol>
+adada
+  <script>
+function some(x) {
+  
+    x.style.opacity = "0";
+  
+}
+  </script>
+</body>
+</html>
