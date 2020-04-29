@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(27, 102, 44);
+}
+
+#carta_virada{
+    width: 10%;
+}
+
+#mesa {
+    display: flex;
+    flex-wrap: wrap;
+    margin:15px;
+    max-width: 1000px;
+}
+#carta{
+    background-image: url('/exercises/7_3/cartas/cinco-de-ouros.png');
+    background-position: center;
+    background-size: 136px;
+    width: 136px;
+    height: 187px;
+    margin: 3px;
+    transition: all 0.2s;
+}
+
+.rotate {
+    animation: rotating 200ms linear 1;
+}
+
+.translate-up {
+    transform: translateY(-60px);
+}
+
+.translate-down {
+    transform: translateY(60px);
+}
+
+.scale-up {
+    transform: scale(1.2)
+}
+
+.scale-down {
+    transform: scale(0.8)
+}
+
+.skew-up {
+    transform: skew(-30deg);
+}
+
+.skew-down {
+    transform: skew(30deg);
+}
+@keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
