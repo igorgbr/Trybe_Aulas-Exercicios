@@ -1,0 +1,43 @@
+@keyframes racing {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 1800px;
+    }
+}
+
+img {
+    width: 150px;
+    height: auto;
+    margin: 30px 0;
+    transition: all 1s;
+}
+
+.rotate {
+    transform: rotate(360deg);
+}
+
+.translate-up {
+    transform: translateY(-60px);
+}
+
+.translate-down {
+    transform: translateY(60px);
+}
+
+.scale-up {
+    transform: scale(1.2)
+}
+
+.scale-down {
+    transform: scale(0.8)
+}
+
+.skew-up {
+    transform: skew(-30deg);
+}
+
+.skew-down {
+    transform: skew(30deg);
+}
