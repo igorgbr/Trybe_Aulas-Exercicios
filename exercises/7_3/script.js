@@ -33,7 +33,6 @@ cartaVirada.addEventListener('click', function(){
    newCard.addEventListener('mouseover', function(){
     var transform = getRandomTransform();
     newCard.className = ''
-    console.log(newCard.classList)
     newCard.classList.add(transform);
     newCard.style.animationFillMode = "forwards";
 
