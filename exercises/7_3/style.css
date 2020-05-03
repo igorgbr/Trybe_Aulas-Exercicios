@@ -18,37 +18,14 @@ body {
     background-size: 136px;
     width: 136px;
     height: 187px;
-    margin: 3px;
+    margin: 13px;
     transition: all 0.2s;
 }
 
 .rotate {
-    animation: rotating 200ms linear 1;
+    animation: rotating 200ms forwards;
 }
 
-.translate-up {
-    transform: translateY(-60px);
-}
-
-.translate-down {
-    transform: translateY(60px);
-}
-
-.scale-up {
-    transform: scale(1.2)
-}
-
-.scale-down {
-    transform: scale(0.8)
-}
-
-.skew-up {
-    transform: skew(-30deg);
-}
-
-.skew-down {
-    transform: skew(30deg);
-}
 @keyframes rotating {
     0% {
       transform: rotate(0deg);
@@ -56,3 +33,87 @@ body {
     100% {
       transform: rotate(360deg);
     }
+}
+
+.translate-up {
+    animation: translateUp  200ms forwards;
+}
+
+@keyframes translateUp  {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-60px);
+    }
+}
+
+.translate-down {
+    animation: translateDown  200ms forwards;
+}
+
+@keyframes translateDown {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(60px);
+    }
+}
+
+.scale-up {
+    animation: scaleUp 200ms forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+}
+
+.scale-down {
+    animation: scaleDown 200ms forwards;
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(0.8);
+      }
+}
+
+.skew-up {
+    animation: skewUp 200ms forwards;
+}
+
+@keyframes skewUp {
+    0% {
+        transform: skew(0deg);
+      }
+      100% {
+        transform: skew(-30deg);
+      }
+}
+
+.skew-down {
+    animation: skewDown  200ms forwards;
+}
+
+@keyframes skewUp {
+    0% {
+        transform: skew(0deg);
+      }
+      100% {
+        transform: skew(30deg);;
+      }
+}
+
+
+
+
+
