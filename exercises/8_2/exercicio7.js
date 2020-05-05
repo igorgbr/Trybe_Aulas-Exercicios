@@ -18,14 +18,20 @@ const lesson1 = {
     turno: 'noite',
   };
 
-
-  const getValueNumber = (obj, value) => {
-    const arrayValues = Object.values(obj);
-    for(i in arrayValues) {
-        if(i == value){
-            return arrayValues[i]; 
-        }
-  }
-}
+//   const getValueNumber = (obj, value) => {
+//     const arrayValues = Object.values(obj);
+//     for(i in arrayValues) {
+//         if(i == value){
+//             return arrayValues[i]; 
+//         }
+//   }
+// }
   
-console.log(getValueNumber(lesson1, 2))
+// console.log(getValueNumber(lesson1, 2))
+
+// var idx = 0;
+//   function numeroChaves(objeto, idx){
+//   var chaves = Object.values(objeto)
+//   console.log(chaves[idx])
+//   }
+//   numeroChaves(lesson2,0)
