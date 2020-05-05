@@ -31,7 +31,7 @@ const lesson1 = {
   const entries = Object.entries(allLessons);
 
 var idx = 0;
-  function numeroChaves(objeto, idx){
+  const numeroChaves = (objeto, idx) => {
   var chaves = Object.values(objeto)
 
     let relatorio = {};

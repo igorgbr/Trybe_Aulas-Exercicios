@@ -21,7 +21,6 @@ const lesson1 = {
   const morningTurn = (novoObjeto, newKey, value) => {
       novoObjeto[newKey] = value;
       return novoObjeto;
-
   }
 
 const newKey = 'turno';
