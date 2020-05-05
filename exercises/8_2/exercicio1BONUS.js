@@ -30,9 +30,7 @@ const lesson1 = {
       }
     };
     return totalAlunos;
-
   }
-
   console.log(`Total: ${totalAlunos(entries)} alunos.`);
 
 
