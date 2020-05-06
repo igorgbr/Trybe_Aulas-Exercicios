@@ -11,3 +11,4 @@ function sum(a, b) {
 assert.equal(sum(4, 5), 9, 'O resultado não é o esperado');
 assert.equal(sum(0, 0), 0, 'O resultado não é o esperado');
 assert.deepEqual(sum(4, "5"), 'O resultado não é o resperado');
+assert.throws(() => { sum(4,'5'); }, /^Error: parameters must be numbers$/);
