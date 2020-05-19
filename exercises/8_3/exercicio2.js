@@ -8,7 +8,6 @@ function myIndexOf(arr, item) {
     }
   }
   return searchedIndex;
-}
 
 // implemente seus testes aqui
 
