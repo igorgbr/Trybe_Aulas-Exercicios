@@ -13,6 +13,7 @@ const findUserById = (id) => {
     });
 }
 
+
 const getUserName = (userID) => {
     return findUserById(userID).then(user => user.name);
 }
@@ -27,5 +28,11 @@ const getUserName = (userID) => {
     await expect (getUserName(2)).rejects.toEqual({ error: 'User with 2 not found.' });
   });
 
-
-  
+it('returns an error', async () => {
+    expect.assertions(1);
+    try {
+      await getUserName(1);
+    } catch (error) {
+      expect(error).toEqual({ error: 'User with 1 not found.' });
+    }
+  });
