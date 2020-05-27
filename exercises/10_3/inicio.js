@@ -1,15 +1,5 @@
-let pontos = 0;
+const funcUpperCase = (str) => `${str.toUpperCase}`;
 
-const balao;
-const jogador = 'nome';
+let caciqueMode = funcUpperCase('xablau')
 
-function tocarBalao () {
-    return jogador.touch(balao);
-}
-
-if(tocarBalao() == true) {
-    pontos += 1;
-} else {
-    pontos -= 1;
-}
-
+console.log(`${caciqueMode} toot`)

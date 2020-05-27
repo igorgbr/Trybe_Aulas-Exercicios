@@ -1,4 +1,3 @@
-const math = require('./math');
 const service = require('service');
 
 // test('Testa se a função foi chamada, o valor retornado e quantas vezes foi chamada', () => {
