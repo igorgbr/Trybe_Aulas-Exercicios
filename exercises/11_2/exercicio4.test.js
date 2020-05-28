@@ -1,5 +1,4 @@
-const exerc = require("./exercicio4");
-const service = require('service');
+const exerc = require("./funcs");
 
 describe("testando implementações", () => {
   test("mockando função para receber um parâmetro e retornar em caixa baixa", () => {
@@ -33,26 +32,42 @@ describe("testando implementações", () => {
     })
 });
 
-describe("exercicio 5", () => {
-    test("mockando função para receber um parâmetro e retornar em caixa baixa", () => {
-        service.funcUpperCase = jest.fn()
-        .mockImplementationOnce(str => str.toLowerCase());
+// describe("exercicio 5", () => {
+//     test("mockando função para receber um parâmetro e retornar em caixa baixa", () => {
+//         service.funcUpperCase = jest.fn()
+//         .mockImplementationOnce(str => str.toLowerCase());
         
-        expect(service.funcUpperCase('XABLAU')).toBe('xablau');
-        expect(service.funcUpperCase).toHaveBeenCalled();
-        expect(service.funcUpperCase).toHaveBeenCalledTimes(1)
-        expect(service.funcUpperCase).toHaveBeenCalledWith('XABLAU');
+//         expect(service.funcUpperCase('XABLAU')).toBe('xablau');
+//         expect(service.funcUpperCase).toHaveBeenCalled();
+//         expect(service.funcUpperCase).toHaveBeenCalledTimes(1)
+//         expect(service.funcUpperCase).toHaveBeenCalledWith('XABLAU');
 
-    });
+//     });
     
-    test('Retorna a func original', () => {
-        service.funcUpperCase.mockReset();
-        expect(service.funcUpperCase).toHaveBeenCalledTimes(0)
-        service.funcUpperCase.mockImplementationOnce(str => str.toUpperCase());
+//     test('Retorna a func original', () => {
+//         service.funcUpperCase.mockReset();
+//         expect(service.funcUpperCase).toHaveBeenCalledTimes(0)
+//         service.funcUpperCase.mockImplementationOnce(str => str.toUpperCase());
         
-        expect(service.funcUpperCase('xablau')).toBe('XABLAU');
-        expect(service.funcUpperCase).toHaveBeenCalled();
-        expect(service.funcUpperCase).toHaveBeenCalledTimes(1)
-        expect(service.funcUpperCase).toHaveBeenCalledWith('xablau');
-    });
-})
+//         expect(service.funcUpperCase('xablau')).toBe('XABLAU');
+//         expect(service.funcUpperCase).toHaveBeenCalled();
+//         expect(service.funcUpperCase).toHaveBeenCalledTimes(1)
+//         expect(service.funcUpperCase).toHaveBeenCalledWith('xablau');
+//     });
+// })
+
+describe("testando implementações", () => {
+  test("mockando função para receber um parâmetro e retornar em caixa baixa", () => {
+    exerc.funcUpperCase.mockRestore();
+    const first = jest
+      .spyOn(exerc, "funcUpperCase")
+    
+    console.log(exerc.funcUpperCase("lowercase"));
+
+    expect(first("lowercase")).toBe("LOWERCASE");
+    expect(first).toHaveBeenCalled();
+    expect(first).toHaveBeenCalledTimes(1);
+    expect(first).toHaveBeenCalledWith("lowercase");
+
+  });
+});
