@@ -1,0 +1,115 @@
+body {
+  margin: 10px;
+  padding: 30;
+  background: linear-gradient(
+      15deg,
+      rgba(41, 41, 41, 1) 4%,
+      rgba(49, 49, 49, 1) 24%,
+      rgba(128, 128, 128, 1) 64%,
+      rgba(138, 138, 138, 1) 70%,
+      rgba(230, 230, 230, 1) 81%,
+      rgba(255, 255, 255, 1) 86%,
+      rgba(220, 220, 220, 1) 89%,
+      rgba(230, 230, 230, 1) 100%
+  );
+  background-color: #8fd495;
+  background-blend-mode: overlay;
+}
+
+.screen-poke {
+  background: linear-gradient(
+    15deg,
+    rgba(41, 41, 41, 1) 4%,
+    rgba(49, 49, 49, 1) 24%,
+    rgba(128, 128, 128, 1) 64%,
+    rgba(138, 138, 138, 1) 70%,
+    rgba(230, 230, 230, 1) 81%,
+    rgba(255, 255, 255, 1) 86%,
+    rgba(220, 220, 220, 1) 89%,
+    rgba(230, 230, 230, 1) 100%
+);
+  width: 200px;
+  background-color: skyblue;
+  background-blend-mode: overlay;
+  border: 6px inset #772c2c;
+}
+.screen-poke img {
+  width: 150px;
+  padding: 0 15%;
+}
+
+.data {
+  background: linear-gradient( 90deg, rgba(138, 138, 138, 1) 78%,
+   rgba(138, 138, 138, 1) 88%, 
+   rgba(230, 230, 230, 1) 93%, 
+   rgba(255, 255, 255, 1) 98%, 
+   rgba(220, 220, 220, 1) 95%,
+   rgba(230, 230, 230, 1) 84% 
+  );
+  background-color: #772c2c;
+  background-blend-mode: overlay;
+  border: 2px inset #772c2c;
+  width: 130px;
+  height: 180px;
+  padding: 0 3%;
+  color: #813030;
+  position: absolute;
+  z-index: 1;
+}
+
+.data p{
+  color:black;
+  margin-left: 200px;
+  height: 25px;
+  width: 150px;
+  animation-name: toFlow;
+  animation-delay: 2s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes toFlow {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.info {
+  width: 200px;
+  height: 180px;
+  top: 178px;
+  left: 215px;
+  background-color: darkred;
+  position:absolute;
+  animation-name: toRight;
+  animation-duration: 2s;
+}
+
+@keyframes toRight {
+  from {left: 0px;}
+  to {left: 215px;}
+}
+
+.select {
+  font-size: 1.2em;
+  background-color: #a34444;
+  border: 3px inset #772c2c;
+  width: 155px;
+  color:#570404;
+  top: 358px;
+  font-weight: bold;
+  position: absolute;
+
+}
+
+button {
+  padding-left: 7px;
+  font-size: 1.2em;
+  background-color: #a34444;
+  border: 3px inset #772c2c;
+  color:#570404;
+  position: absolute;
+  top: 358px;
+  left: 165px;
+
+}
