@@ -9,6 +9,7 @@ const Pictures = (props) => {
       
 <div>
     {children}
+    
 </div>
   )
 };
