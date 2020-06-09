@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import MyList from './MyList';
 import ShowButton from './ShowButton';
-import Pictures from './Picutres';
+import Pictures from './Pictures';
 import PropTypes from 'prop-types';
-import PicAttribute from './PicAttribute';
+import PictureList from './PicturesList';
 
 class App extends Component {
   constructor(props) {
@@ -27,14 +27,14 @@ class App extends Component {
           SUPIMPA 2.0 - Melhor palavra!
           <ShowButton changeTitle={this.changeTitle} value="Título Show" />
         </MyList>
-        <Pictures>
-          <PicAttribute
+        <PictureList>
+          <Pictures
             height={200}
             src="https://image.freepik.com/fotos-gratis/imagem-macro-de-laranja-madura-na-mesa-de-madeira_1150-20092.jpg"
             alt="Logo da Trybe"
             legend={'Lista feita na Trybe'}
           />
-        </Pictures>
+        </PictureList>
       </div>
     );
   }

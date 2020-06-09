@@ -2,15 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Pictures = (props) => {
-    console.log(props.children)
-    const children = props.children;
-    
-  return (
-      
-<div>
-    {children}
-    
-</div>
+    const { height, src, alt, legend } = props;
+    return (
+      <div>
+        <img src={src} height={height} alt={alt} figcaption={legend}/>
+      </div>
   )
 };
 
