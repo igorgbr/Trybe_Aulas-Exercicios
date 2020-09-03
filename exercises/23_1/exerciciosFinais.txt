@@ -1,0 +1,16 @@
+exercicio 7
+> db.books.count()
+431
+
+exercicio 8
+> db.books.find({"status":"PUBLISH"}).count()
+363
+
+exercicio 9
+> db.books.find({},{_id: 0, title: 1, isbn: 1, pageCount: 1}).limit(3)
+{ "title" : "Flex 3 in Action", "isbn" : "1933988746", "pageCount" : 576} 
+{ "title" : "Flex 4 in Action", "isbn" : "1935182420", "pageCount" :600 } 
+{ "title" : "Collective Intelligence in Action", "isbn" : "1933988312", "pageCount" : 425 }
+
+> db.books.find({"status":"MEAP"},{_id: 1, title: 1, authors: 1, status: 1 }).skip(5).limit(10)
+
