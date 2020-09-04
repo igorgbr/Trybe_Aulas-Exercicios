@@ -1,0 +1,11 @@
+exercicio 7
+> db.books.count()
+431
+
+exercicio 8
+> db.books.find({"status":"PUBLISH"}).count()
+363
+
+exercicio 9
+
+
