@@ -1,9 +1,10 @@
 db.movies.updateOne(
   { title: 'Batman', 'cast.character': 'Batman' },
   {
-    $addToSet: {
+    $push: {
       'cast.$.actor': {
         $each: ['Michael Keaton', 'Val Kilmer', 'George Clooney'],
+        $sort: 1,
     
       },
     },
