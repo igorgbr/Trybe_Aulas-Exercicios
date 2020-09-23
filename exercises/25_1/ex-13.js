@@ -9,7 +9,7 @@ db.vendas.aggregate([
       $match: {
         dataVenda: {
           $gte: ISODate('2019-01-01'),
-          $lte: ISODate('2019-03-31'),
+          $lte: ISODate('2019-12-31'),
         },
       },
     },
