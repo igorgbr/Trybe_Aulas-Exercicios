@@ -15,12 +15,12 @@ function interface() {
     // TODO: Log the answer in a database
     console.log(`opening...........       ${resp}`);
     try {
-        const startTime = await Date.now();
+        const startTime = await Date.now(); //conta o momento em que o arquivo é aberto
         const file = await readFile(path.resolve(__dirname, resp));
         console.log(file.toString('utf8'));
        
         console.log(`Arquivo de ${file.byteLength} bytes`)
-        const finishTime = Date.now() - startTime;
+        const finishTime = Date.now() - startTime; // subtrai o moment oem que o arquivo é aberto até ele ser carregado
         console.log(`em ${finishTime} ms`)
 
     } catch (err) {
