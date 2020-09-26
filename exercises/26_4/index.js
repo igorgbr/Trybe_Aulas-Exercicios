@@ -1,8 +1,8 @@
 const express = require('express');
-
 const app = express();
-
 app.use(express.json());
+//Fim dos módulos
+
 
 app.get('/', function (req, res) {
   /* Retorna a resposta */
