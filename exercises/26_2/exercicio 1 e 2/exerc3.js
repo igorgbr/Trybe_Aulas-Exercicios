@@ -14,8 +14,8 @@ function interface() {
   rl.question('WRITE THE FILE NAME: ', async function (resp) {
     // TODO: Log the answer in a database
     console.log(`opening...........       ${resp}`);
+    const startTime = Date.now(); //conta o momento em que o arquivo é aberto
     try {
-        const startTime = await Date.now(); //conta o momento em que o arquivo é aberto
         const file = await readFile(path.resolve(__dirname, resp));
         console.log(file.toString('utf8'));
        
