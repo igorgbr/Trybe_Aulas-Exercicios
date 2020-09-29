@@ -1,0 +1,12 @@
+{
+  "name": "io-local",
+  "version": "1.0.0",
+  "description": "estudo de promisses",
+  "main": "readFileSync.js",
+  "scripts": {
+    "start": "node readFileSync.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "igor giamoniano",
+  "license": "ISC"
+}
