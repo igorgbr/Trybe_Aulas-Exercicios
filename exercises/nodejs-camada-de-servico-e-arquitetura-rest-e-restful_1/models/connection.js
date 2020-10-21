@@ -1,4 +1,20 @@
 const mysqlx = require('@mysql/xdevapi');
+const mongoClient = require('mongodb').MongoClient;
+
+const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
+
+const connectionMongo = () => {
+  return mongoClient
+    .connect(MONGO_DB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+    .then((conn) => conn.db('db_ceps'))
+    .catch((err) => {
+      console.error(err);
+      process.exit(1);
+    });
+};
 
 let schema; /* Aqui entra a variável que salva à conexão, começa como undefined */
 const connection = () => {
@@ -26,5 +42,4 @@ const connection = () => {
         });
 };
 
-
-module.exports = { connection };
+module.exports = { connection, connectionMongo };

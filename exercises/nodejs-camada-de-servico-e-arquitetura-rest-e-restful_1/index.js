@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/cep', cepController.renderInput)
-app.post('/cep', cepController.listCep)
+app.post('/cep', cepController.listCepMongo)
 
 
 const PORT = process.env.PORT || 3000;

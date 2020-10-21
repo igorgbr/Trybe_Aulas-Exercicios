@@ -1,7 +1,23 @@
-const { connection } = require('./connection');
+const { connection, connectionMongo } = require('./connection');
 const fetch = require('node-fetch');
 
-const getAll = async () =>
+//Acessa todos os dados do MONGO
+const getAllMongo = async () =>
+  connectionMongo()
+    .then((db) => db.collection('data_cep').find().toArray())
+    .then((data) =>
+      data.map(({ _id, cep, uf, bairro, logradouro }) => ({
+        id: _id,
+        cep,
+        uf,
+        bairro,
+        logradouro,
+      }))
+    )
+    .then((e) => console.log(e));
+
+//Acessa todos os dados do MySQL
+/* const getAll = async () =>
   connection()
     .then((db) =>
       db
@@ -18,18 +34,25 @@ const getAll = async () =>
         bairro,
         logradouro,
       }))
-    );
+    ); */
 
-const create = async (cep, uf, cidade, bairro, logradouro) =>
+// ----------------------- ACIMA PARA IMPLEMENTAÇÕES FUTURAS ----------------------------
+
+/* const create = async (cep, uf, cidade, bairro, logradouro) =>
   connection().then((db) =>
     db
       .getTable('dados_cep')
       .insert(['cep', 'uf', 'cidade', 'bairro', 'logradouro'])
       .values([cep, uf, cidade, bairro, logradouro])
       .execute()
+  ); */
+
+const createMongo = async (obj) =>
+  connectionMongo().then((db) =>
+    db.collection('data_cep').insertOne(obj).toArray()
   );
 
-const findDB = async (cepUser) =>
+/* const findDB = async (cepUser) =>
   connection()
     .then((db) =>
       db
@@ -43,6 +66,20 @@ const findDB = async (cepUser) =>
     .then((data) =>
       data.map(([id, cep, uf, cidade, bairro, logradouro]) => ({
         id,
+        cep,
+        uf,
+        cidade,
+        bairro,
+        logradouro,
+      }))
+    ); */
+
+const findDBMongo = async (cepUser) =>
+  connectionMongo()
+    .then((db) => db.collection('data_cep').find(cepUser).toArray())
+    .then((data) =>
+      data.map(({ _id, cep, uf, cidade, bairro, logradouro }) => ({
+        id: _id,
         cep,
         uf,
         cidade,
@@ -68,8 +105,8 @@ const findCepAPI = async (cep) => {
 };
 
 module.exports = {
-  getAll,
-  findDB,
   findCepAPI,
-  create,
+  getAllMongo,
+  findDBMongo,
+  createMongo,
 };
