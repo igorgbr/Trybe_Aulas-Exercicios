@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CEP - Exemplo</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <% if (mensagem) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= mensagem %>
+    </div>
+    <% } %>
+
+    <navbar><%- include('input')%></navbar>
+
+    <% if (dados) { %>
+
+      <p>CEP: <%= dados[0].cep %></p>
+      <p>UF: <%= dados[0].uf %></p>
+      <p>BAIRRO: <%= dados[0].bairro %></p>
+      <p>CIDADE: <%= dados[0].cidade %></p>
+      <p>LOGRADOURO: <%= dados[0].logradouro %></p>
+      <% } %>
+
+  </body>
+</html>
